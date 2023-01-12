@@ -13,9 +13,11 @@ const images = [
   },
 ];
 const listEl = document.querySelector('.gallery')
+listEl.style.display = 'flex';
+listEl.style.flexDirection = 'column';
+listEl.style.listStyle = 'none'
 images.map(image => {
-listEl.insertAdjacentHTML("afterbegin", `<li><img src = ${image.url} alt = ${image.alt}><li/>`)
+  listEl.insertAdjacentHTML("beforeend", `<li><img src = ${image.url} alt = ${image.alt} width = 400 height = 300 ><li/>`)
 })
-
 
 
