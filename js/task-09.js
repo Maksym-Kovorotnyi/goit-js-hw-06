@@ -7,6 +7,7 @@ const colorValueText = document.querySelector(".color")
 btnEl.addEventListener('click', colorChanger)
 
 function colorChanger(event) {
-bodyEl.style.backgroundColor = getRandomHexColor()
-colorValueText.textContent = getRandomHexColor()
+  const functionKeeper = getRandomHexColor()
+bodyEl.style.backgroundColor = functionKeeper
+colorValueText.textContent = functionKeeper
 }

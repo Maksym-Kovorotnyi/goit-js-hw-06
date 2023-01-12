@@ -12,12 +12,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const listEl = document.querySelector('.gallery')
+
+const listEl = document.querySelector('.gallery'); 
 listEl.style.display = 'flex';
 listEl.style.flexDirection = 'column';
 listEl.style.listStyle = 'none'
-images.map(image => {
-  listEl.insertAdjacentHTML("beforeend", `<li><img src = ${image.url} alt = ${image.alt} width = 400 height = 300 ><li/>`)
-})
+const listGallery = images.map(img => `<li><img src = "${img.url}" alt = "${img.alt}" width = 480 height = 300/></li>`).join('')
 
-
+  listEl.insertAdjacentHTML("afterbegin", listGallery)

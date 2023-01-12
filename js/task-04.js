@@ -1,9 +1,10 @@
-const btnEl = document.querySelectorAll('#counter button')
+const btnElDecrement = document.querySelector('button[data-action="decrement"]')
+const btnElIncrement = document.querySelector('button[data-action="increment"]')
 
 const valueEl = document.querySelector('#value')
 
-btnEl[0].addEventListener('click', decrement)
-btnEl[1].addEventListener('click', increment)
+btnElDecrement.addEventListener('click', decrement)
+btnElIncrement.addEventListener('click', increment)
 let counter = 0
 
 function decrement(event) {
